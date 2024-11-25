@@ -14,7 +14,7 @@
       flex-direction: column;
       height: 100vh;
       margin: 0;
-      overflow: hidden;
+      overflow: auto; /* Allow scrolling if content overflows */
     }
 
     h1 {
@@ -28,7 +28,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: #1a1a1a;
-      padding: 15px 30px; /* Increased padding to make more room */
+      padding: 15px 30px; /* Adjusted padding */
       width: 100%;
       position: fixed;
       top: 0;
@@ -44,14 +44,14 @@
 
     .header .nav-buttons {
       display: flex;
-      gap: 35px; /* Increased gap between buttons */
+      gap: 45px; /* Increased gap between buttons */
     }
 
     .header .button {
       background-color: #333;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 24px; /* Slightly increased padding */
       font-size: 1.2em;
       cursor: pointer;
       border-radius: 5px;
@@ -69,14 +69,14 @@
       align-items: center;
       flex-direction: column;
       height: 100%;
-      margin-top: 90px; /* Adjusted for the larger header */
+      margin-top: 110px; /* Adjusted margin to account for the larger header */
       z-index: 1;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px; /* Increased gap between buttons */
       align-items: center;
     }
 
