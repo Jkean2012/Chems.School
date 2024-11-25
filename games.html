@@ -25,10 +25,10 @@
     /* Header Banner Styles */
     .header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Center the nav-buttons container */
       align-items: center;
       background-color: #1a1a1a;
-      padding: 15px 30px; /* Adjusted padding */
+      padding: 15px 30px;
       width: 100%;
       position: fixed;
       top: 0;
@@ -40,19 +40,21 @@
       font-size: 1.8em;
       font-weight: bold;
       color: white;
+      position: absolute; /* To keep the brand text on the left */
+      left: 30px; /* Adjust left padding for the brand */
     }
 
     .header .nav-buttons {
       display: flex;
-      gap: 45px; /* Increased gap between buttons */
-      margin-left: 2in; /* Move all nav buttons 2 inches to the left */
+      gap: 30px; /* Space between buttons */
+      justify-content: center; /* Center the buttons horizontally */
     }
 
     .header .button {
       background-color: #333;
       color: white;
       border: none;
-      padding: 12px 24px; /* Slightly increased padding */
+      padding: 12px 24px;
       font-size: 1.2em;
       cursor: pointer;
       border-radius: 5px;
@@ -70,16 +72,15 @@
       align-items: center;
       flex-direction: column;
       height: 100%;
-      margin-top: 110px; /* Adjusted margin to account for the larger header */
+      margin-top: 110px; /* Adjusted margin to account for the fixed header */
       z-index: 1;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 30px; /* Increased gap between buttons */
-      align-items: center;
-      margin-left: 2in; /* Move all buttons in content 2 inches to the left */
+      gap: 30px; /* Space between game buttons */
+      align-items: center; /* Center the buttons */
     }
 
     .button {
@@ -160,4 +161,3 @@
   </script>
 </body>
 </html>
-
