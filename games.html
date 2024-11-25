@@ -11,8 +11,6 @@
       color: white;
       font-family: Arial, sans-serif;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
       height: 100vh;
       margin: 0;
@@ -22,6 +20,57 @@
     h1 {
       font-size: 3em;
       margin-bottom: 40px;
+    }
+
+    /* Header Banner Styles */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .header .brand {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: white;
+    }
+
+    .header .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .header .button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .header .button:hover {
+      background-color: #555;
+    }
+
+    /* Main content area */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      margin-top: 70px; /* to offset the fixed header */
+      z-index: 1;
     }
 
     .buttons {
@@ -57,14 +106,28 @@
   </style>
 </head>
 <body>
-  <h1>Games - Classroom84X</h1>
-  <div class="buttons">
-    <!-- You can add specific game links here -->
-    <button class="button" onclick="window.location.href='game1.html'">Game 1</button>
-    <button class="button" onclick="window.location.href='game2.html'">Game 2</button>
-    <button class="button" onclick="window.location.href='game3.html'">Game 3</button>
-    <!-- Add more game buttons as needed -->
-    <button class="button" onclick="window.location.href='index.html'">Back to Home</button>
+
+  <!-- Header with Logo and Navigation -->
+  <div class="header">
+    <div class="brand">Classroom84X</div>
+    <div class="nav-buttons">
+      <button class="button" onclick="window.location.href='index.html'">Home</button>
+      <button class="button" onclick="window.location.href='games.html'">Games</button>
+      <button class="button" onclick="window.location.href='apps.html'">Apps</button>
+      <button class="button" onclick="window.location.href='partners.html'">Partners</button>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <h1>Games - Classroom84X</h1>
+    <div class="buttons">
+      <!-- You can add specific game links here -->
+      <button class="button" onclick="window.location.href='game1.html'">Game 1</button>
+      <button class="button" onclick="window.location.href='game2.html'">Game 2</button>
+      <button class="button" onclick="window.location.href='game3.html'">Game 3</button>
+      <!-- Add more game buttons as needed -->
+    </div>
   </div>
 
   <!-- Particles.js -->
