@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Games - Classroom84X</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Games - Classroom84X</h1>
+  <div class="buttons">
+    <!-- You can add specific game links here -->
+    <button class="button" onclick="window.location.href='game1.html'">Game 1</button>
+    <button class="button" onclick="window.location.href='game2.html'">Game 2</button>
+    <button class="button" onclick="window.location.href='game3.html'">Game 3</button>
+    <!-- Add more game buttons as needed -->
+    <button class="button" onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+
+  <!-- Particles.js -->
+  <div id="particles-js"></div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100 },
+        size: { value: 3 },
+        move: { speed: 2 },
+        line_linked: {
+          enable_auto: true,
+          color: "#ffffff",
+          opacity: 0.3,
+          width: 1
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
