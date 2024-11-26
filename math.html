@@ -145,19 +145,45 @@
         number: { value: 100 },
         size: { value: 3 },
         move: { speed: 2 },
+        color: {
+          value: ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"],  // Color array for particles
+        },
+        opacity: {
+          value: 0.6,
+          random: true, // Random opacity for particles
+        },
         line_linked: {
           enable_auto: true,
           color: "#ffffff",
           opacity: 0.3,
           width: 1
-        }
+        },
       },
       interactivity: {
         detect_on: "canvas",
         events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
+          onhover: { 
+            enable: true, 
+            mode: "repulse" 
+          },
+          onclick: { 
+            enable: true, 
+            mode: "push" 
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          }
         }
+      },
+      animation: {
+        enable: true,
+        speed: 1
       }
     });
   </script>
